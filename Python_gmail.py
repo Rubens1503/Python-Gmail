@@ -10,10 +10,10 @@ import sys
 #Conexión a la base de datos
 try:
     mydbd = pymysql.connect(
-    host= 'b2wspwslqhwsx8gjmfdu-mysql.services.clever-cloud.com',
-    user='uosyo14l4rzfw3k7',
-    password='yDK96FLituORblDIMyjv',
-    db='b2wspwslqhwsx8gjmfdu'
+    host= input("Host: "),
+    user= input("User: "),
+    password= input("Password "),
+    db= input("db: ")
     )
 except:
     print("Error al conectar la base de datos, por favor vuelva a intentar ")
@@ -55,9 +55,6 @@ for i in mensaje[0].split():
                     date= decode_header(mensaje["date"])[0][0]
                     # de donde viene el correo
                     from_= mensaje.get("From")
-                    print(date)
-                    print(from_)
-                    print(subject)
 #///////////////////////////////////////////////////////////////////////////#
      #Almacenamos los datos en la base mysql
     try:
